@@ -75,9 +75,10 @@ while True:
     elif strChoice.strip() == '4':
         objF = open(objFile, "w")
         for dicRow in lstTable:
-            objF.write(dicRow["No."] + "," + dicRow["To do :"] + "," + dicRow["Status"] + "\n")
+            objF.write(str(dicRow["No."]) + "," + dicRow["To do :"] + "," + dicRow["Status"] + "\n")
         objF.close()
         print("Data saved to file.")
+
 
     # Step 7 - Exit program
     elif strChoice.strip() == '5':
